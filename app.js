@@ -1,3 +1,7 @@
+// import {sayHi} from './sayHi.js';
+
+// sayHi('Jonathan')
+
 document.addEventListener('DOMContentLoaded', () =>  {
     const gridDisplay = document.querySelector('.grid')
     const scoreDisplay = document.getElementById('score')
@@ -5,11 +9,12 @@ document.addEventListener('DOMContentLoaded', () =>  {
     let squares = []
     const width = 4
     let score = 0
+    // let square=0;
   
     //create the playing board
     function createBoard() {
       for (let i=0; i < width*width; i++) {
-        square = document.createElement('div')
+        let square = document.createElement('div')
         square.innerHTML = 0
         gridDisplay.appendChild(square)
         squares.push(square)
@@ -21,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () =>  {
   
     //generate a new number
     function generate() {
-      randomNumber = Math.floor(Math.random() * squares.length)
+      let randomNumber = Math.floor(Math.random() * squares.length)
       if (squares[randomNumber].innerHTML == 0) {
         squares[randomNumber].innerHTML = 2
         checkForGameOver()
