@@ -1,6 +1,4 @@
-// import {sayHi} from './sayHi.js';
-
-// sayHi('Jonathan')
+import {clear} from './function.js';
 
 document.addEventListener('DOMContentLoaded', () =>  {
     const gridDisplay = document.querySelector('.grid')
@@ -210,11 +208,6 @@ document.addEventListener('DOMContentLoaded', () =>  {
         document.removeEventListener('keyup', control)
         setTimeout(() => clear(), 3000)
       }
-    }
-  
-    //clear timer
-    function clear() {
-      clearInterval(myTimer)
     }
   
   
